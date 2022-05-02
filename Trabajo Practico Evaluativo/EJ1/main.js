@@ -8,7 +8,7 @@ function analisis () {
  }
 else {
     if (nombre == 'Ford Ka') {
-           const resultado = 170000-((15*1750000)/100) 
+           const resultado = 1700000-((15*1750000)/100) 
             alert ("su descuento es:"+resultado)
     }  
 
