@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Ejercicio 3</a>
+        </div>
+    </nav> 
     
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="mb-3">
+                        <input  id= "inp_a"placeholder= "ingrese cateto opuesto" type="text">
+                        <input  id= "inp_b" placeholder="ingrese cateto adyacente" type="text">
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <button onclick="mostrar()"class="btn btn-danger">Calcular</button>
+    </div>
+    
+    <h4 id="h4_titulo">Resultado:</h4>
+
+    <script src="main.js"></script>
 </body>
 </html>

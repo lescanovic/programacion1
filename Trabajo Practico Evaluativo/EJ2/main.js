@@ -1,15 +1,38 @@
-const consulta = (temperatura) => {
-    const temperatura= document.getElementById ("inp_temp")
+const consulta = (f) => {
+    //la funcion consulta, recibe los datos de la funcion mostrar
 
-    if (temperatura>=14 && temperatura<=32) {
-        alert("Temperatura baja")
 
- 
+    let mensaje = null
+
+    if (f>=14 && f<=32) {
+       mensaje = 'Temperatura baja'
+    }
+    else {
+        if (f >32 && f<68) {
+           mensaje ='Temperatura adecuada'
+        } else {
+            if (f > 68 && f<96) {
+                mensaje = 'Temperatura alta'
+            }
+            else {
+                mensaje ='temperatura desconocida'
+            }
+        }
+        
     }
 
-
-    return consulta
+    return mensaje
+    
 }
-const boton = document.getElementById ("btn_consulta")
-boton.addEventListener("click",consulta)
+
+
+const mostrar = () =>{
+    const f= document.getElementById("inp_temp").value
+    //envio los datos a la otra funcion
+    const respuesta = consulta(f)
+    //muestro el resultado en un h1
+    document.getElementById("h1_titulo").textContent = respuesta
+   
+}
+    
 
