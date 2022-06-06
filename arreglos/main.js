@@ -7,7 +7,7 @@ Longitud = ${helados.length}
 `)
 
 //acceso a un elemento de un arreglo mediante su indice 
-let ultimo_elemento = helados [helados.length-1] //accedo a la ultima posision del arreglo
+let ultimo_elemento = helados [helados.length-1] //accedo a la ultima posicion del arreglo
 
 console.log (`
 ultimo elemento: ${ultimo_elemento}
