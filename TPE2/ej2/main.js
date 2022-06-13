@@ -12,7 +12,7 @@ console.log(lenguajes)
 
 function mostrar(){
     let longitud = lenguajes.length
-    document.getElementById("longitud").textContent = longitud
+    document.getElementById("longitud").textContent = 'La longitud es: '+longitud
     
     let ultimo_elemento = lenguajes [lenguajes.length-1]
     document.getElementById("ultimo").textContent = ultimo_elemento
