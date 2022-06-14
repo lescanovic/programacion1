@@ -4,7 +4,7 @@ export default class Vehiculo {
     marca; 
     km;
 
-   //constructor es un metodo que viene con la clase
+   //constructor es un metodo que viene con la clase y se ejecuta cuando se crea la instancia
     constructor(m,km){
        this.marca = m
        this.km = km
