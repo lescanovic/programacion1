@@ -43,7 +43,7 @@ export default class Cliente{
                 <td>${element.apellido}</td>
                 <td>${element.dni}</td>
                 <td>
-                    <button onclick = "eliminar_cliente(${index})"class= "btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i> </button>
+                    <button onclick="guardar_indice(${index})" data-bs-toggle="modal" data-bs-target="#mymodal" class= "btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i> </button>
                 </td>
 
             </tr>`
@@ -60,5 +60,7 @@ export default class Cliente{
 
         this.obtener_clientes()
     }
+
+   
 }
 

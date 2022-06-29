@@ -22,4 +22,14 @@ function listar(){
 
 
 }
-listar()
+listar();
+
+
+function eliminar (){
+  let indice = localStorage.getItem("indice_eliminacion")
+
+  let cliente = new Cliente();
+  cliente.eliminar_cliente (indice)
+
+}
+document.getElementById("btn_eliminar").addEventListener("click",eliminar)
