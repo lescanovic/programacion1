@@ -31,11 +31,11 @@ export default class Producto{
             <tr>
             <td>${index}</td>
             <td><img style="width:2rem" class="img-fluid" src="${element.imagen}"></img> </td>
-            <td>${element.descripcion}</td>
             <td>${element.precio}</td>
+            <td>${element.descripcion}</td>
             <td>
                 <button onclick="guardar_indice(${index})" data-bs-toggle="modal" data-bs-target="#modal" class= "btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></button>
-                <button onclick = "editar(${index})" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></i></button> 
+                <button onclick="editar(${index})" class="btn btn-outline-primary btn-sm"><i class="fa fa-edit"></i></button> 
             </td>
             </tr>`
             filas.push(fila)
@@ -53,15 +53,46 @@ export default class Producto{
     }
 
     actualizar_productos(){
+        let index = localStorage.getItem("indice_update")
         let productos = JSON.parse(localStorage.getItem("productos"))
-        productos[index].imagen = document.getElementById("inp_imagen").value 
+        productos[index].imagen = document.getElementById("inp_imagen").value
         productos[index].precio = document.getElementById("inp_precio").value 
         productos[index].descripcion = document.getElementById("inp_descripcion").value
 
 
-        localStorage.setItem("productos",JSON.stringify("productos"))
+        localStorage.setItem("productos",JSON.stringify(productos))
 
         this.obtener_productos()
+        document.getElementById("btn_guardar").style.display= "block"
+        document.getElementById("btn_actualizar").style.display = "none"
     }
 
+
+    obtener_catalogo(){
+        let listado = JSON.parse(localStorage.getItem("productos"))
+        let filas = []
+        listado.forEach((element)=>{
+            let fila =`
+            <div class="col-lg-2">
+            <img src="${element.imagen}" class="img-fluid rounded-start" alt="">
+            
+            <div class="card w-50">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+    
+            </div>
+        
+    
+        `;
+
+        filas.push(fila)
+        });
+        document.getElementById("catalogo").innerHTML = filas.join('')
+    }
+    
+    
 }

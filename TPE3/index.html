@@ -21,12 +21,12 @@
             <div class="col-lg-4">
                 <div class="mb-3">
                     <label class="form-label" for="">Imagen</label>
-                    <input class="form-control" placeholder = " Ingrese Imagen/URL"id="inp_imagen"  class="form-file btn-sm"type="file">
+                    <input class="form-control" placeholder = " Ingrese Imagen/URL" id="inp_imagen"  class="form-file btn-sm" type="text">
                     
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="">Precio</label>
-                   <input class = "form-control"placeholder = "Ingrese precio"id="inp_precio" type="number">
+                   <input class = "form-control"placeholder = "Ingrese precio" id="inp_precio" type="number">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="">Descripcion</label>
@@ -34,7 +34,7 @@
                 </div>
 
                 <button id="btn_guardar" class="btn btn-danger">Guardar</button>
-                <button id="btn_actualizar" class="btn btn-danger">Actualizar</button>
+                <button style="display:none" id="btn_actualizar" class="btn btn-danger">Actualizar</button>
                 </div>
         
         <div class="col-lg-8">
@@ -58,6 +58,10 @@
 
         </div>
 
+   
+     
+
+
     </div>  
     
     <div id="modal" class="modal" tabindex="-1">
@@ -77,7 +81,10 @@
           </div>
         </div>
       </div>
-      
+
+
+
+      <script src="bootstrap.bundle.min.js"></script>
     <script src="main.js" type="module"></script>
     <script src="auxiliar.js" ></script>
 </body>

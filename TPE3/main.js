@@ -7,7 +7,7 @@ let descripcion = document.getElementById("inp_descripcion").value
 
 
 
-let producto = new Producto(imagen,descripcion,precio)
+let producto = new Producto(imagen,precio,descripcion)
 
 producto.guardar_producto()
 }
@@ -30,7 +30,11 @@ function eliminar (){
 
   function actualizar(){
     let index = localStorage.getItem("indice_update")
-    let producto1 = new Producto
+    let producto1 = new Producto()
     producto1.actualizar_productos(index)
   }
   document.getElementById("btn_actualizar").addEventListener("click",actualizar)
+
+
+
+ 
