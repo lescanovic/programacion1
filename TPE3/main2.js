@@ -6,3 +6,5 @@ function obtener_catalogo()
 }
 
 obtener_catalogo()
+
+crear_tablita()

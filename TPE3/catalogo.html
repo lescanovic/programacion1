@@ -21,10 +21,14 @@
                 <div id= "catalogo"class="row"></div>
                 </div>
                 <div class="col-lg-4">
-                <table class="table">
-                    <thead>
+                    <div class="mb-3">
+                        <label class="form-label" for=""></label>
+                        <input class = "form-control"placeholder = "" type="number">
+                    </div>
+                <table class="table table-danger table-striped">
+                    <thead class=table-ligth>
                             <tr>  
-                             <th>Encargo</th>
+                             <th>Nombre del producto</th>
                               <th>Cantidad</th>
                               <th>Precio</th>
                             
@@ -34,16 +38,18 @@
             
                     </tbody>
                 </div>
-        
+               
         
         </div>
 
-       
+      
     </div>
-
-   
   </table>
-
+  <div class="mb-3">
+    <button class="btn btn-danger">Finalizar Compra</button>
+  </div>
+  
     <script src="main2.js" type="module"></script>
+    <script src="auxiliar.js"></script>
 </body>
 </html>

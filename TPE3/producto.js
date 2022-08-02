@@ -1,4 +1,5 @@
 export default class Producto{
+
     constructor(img,pre,desc){
         this.imagen = img
         this.precio = pre
@@ -71,16 +72,18 @@ export default class Producto{
     obtener_catalogo(){
         let listado = JSON.parse(localStorage.getItem("productos"))
         let filas = []
-        listado.forEach((element)=>{
+        listado.forEach((element,index)=>{
+
+            let descripcion = element.descripcion
+
             let fila =`
-            <div class="col-lg-2">
+            <div class="col-lg-3">     
             <img src="${element.imagen}" class="img-fluid rounded-start" alt="">
-            
-            <div class="card w-50">
+            <div class="card w-90">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Button</a>
+              <h5 class="card-title">${element.descripcion}</h5>
+              <p class="card-text"></p>
+              <button onclick="agregar('${element.descripcion}','${element.precio}')" class="btn btn-danger">Agregar</button>
             </div>
           </div>
     
@@ -96,3 +99,4 @@ export default class Producto{
     
     
 }
+//agregar un input arriba de la tabla y un boton finalizar pedido
