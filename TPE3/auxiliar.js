@@ -39,26 +39,26 @@ function agregar(d,p)
     crear_tablita()
 }
 
-
 function crear_tablita(){
     
-let listado = JSON.parse (localStorage.getItem("pedidos"))
-let lista = []
-listado.forEach(element => {
-    let tr = `
-    <tr>
-    <td>${element.descripcion}</td>
-    <td>${element.cantidad}</td>
-    <td>${element.precio}</td>
-  
-</tr>
-`
-lista.push(tr)
-});
- 
-document.getElementById("tb").innerHTML = lista.join('')
-
-}
+    let listado = JSON.parse (localStorage.getItem("pedidos"))
+    let lista = []
+    listado.forEach(element => {
+        let tr = `
+        <tr>
+        <td>${element.descripcion}</td>
+        <td>${element.cantidad}</td>
+        <td>${element.precio}</td>
+      
+    </tr>
+    `
+    lista.push(tr)
+    });
+     
+    document.getElementById("tb").innerHTML = lista.join('')
+    
+    }
+    crear_tablita()
 
 function seguimiento (){
 
@@ -85,26 +85,10 @@ function seguimiento (){
         localStorage.setItem("seguimientos", JSON.stringify(lista_pedidos))
     }   
 
-    
+
         crear_tabla()
     
   }
 
-function crear_tabla(){
-    let lista= []
-    seguimiento_de_pedidos.forEach(element => {
-        let tr = `
-        <tr>
-        <td>${element.nombre}</td>
-        <td>${element.fecha}</td>
-        <td>${element.estado}</td>
-        <td>${element.detalle}</td>
-      
-    </tr>
-    `
-    lista.push(tr)
-    });
-     
-    document.getElementById("tb1").innerHTML = lista.join('')
-}
+
   
