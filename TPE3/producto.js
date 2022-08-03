@@ -52,7 +52,6 @@ export default class Producto{
 
         this.obtener_productos()
     }
-
     actualizar_productos(){
         let index = localStorage.getItem("indice_update")
         let productos = JSON.parse(localStorage.getItem("productos"))
@@ -67,8 +66,6 @@ export default class Producto{
         document.getElementById("btn_guardar").style.display= "block"
         document.getElementById("btn_actualizar").style.display = "none"
     }
-
-
     obtener_catalogo(){
         let listado = JSON.parse(localStorage.getItem("productos"))
         let filas = []
@@ -99,4 +96,3 @@ export default class Producto{
     
     
 }
-//agregar un input arriba de la tabla y un boton finalizar pedido

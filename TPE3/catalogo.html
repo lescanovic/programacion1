@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catalogo</title>
+    <title>Catalogo de electrodomesticos</title>
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-dark btn-danger">
+    <nav class="navbar navbar-light btn-success">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Catalogo de productos </a>
         </div>
@@ -23,9 +23,9 @@
                 <div class="col-lg-4">
                     <div class="mb-3">
                         <label class="form-label" for=""></label>
-                        <input class = "form-control"placeholder = "" type="number">
+                        <input  id = "inp_nombre"class = "form-control"placeholder = "Ingrese su nombre" type="text">
                     </div>
-                <table class="table table-danger table-striped">
+                <table class="table table-success table-striped">
                     <thead class=table-ligth>
                             <tr>  
                              <th>Nombre del producto</th>
@@ -46,7 +46,9 @@
     </div>
   </table>
   <div class="mb-3">
-    <button class="btn btn-danger">Finalizar Compra</button>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button  onclick = "seguimiento()"class="btn btn-success">Finalizar Compra</button>
+    </div>
   </div>
   
     <script src="main2.js" type="module"></script>

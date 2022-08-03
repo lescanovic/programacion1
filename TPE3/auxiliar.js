@@ -60,4 +60,51 @@ document.getElementById("tb").innerHTML = lista.join('')
 
 }
 
+function seguimiento (){
 
+    let detalle = JSON.parse (localStorage.getItem("pedidos"))
+    const nombre = document.getElementById("inp_nombre").value
+    let seguimiento_de_pedidos = {
+        cliente: nombre,
+        fecha: '',
+        estado: 'Pendiente',
+        detalle :detalle
+       
+    }
+
+    if ("seguimientos" in localStorage) {
+        let lista = JSON.parse (localStorage.getItem("seguimientos"))
+        lista.push(seguimiento_de_pedidos)
+        localStorage.setItem("seguimientos", JSON.stringify(lista))
+    } 
+    else 
+    {
+        
+        let lista_pedidos = []
+        lista_pedidos.push(seguimiento_de_pedidos)
+        localStorage.setItem("seguimientos", JSON.stringify(lista_pedidos))
+    }   
+
+    
+        crear_tabla()
+    
+  }
+
+function crear_tabla(){
+    let lista= []
+    seguimiento_de_pedidos.forEach(element => {
+        let tr = `
+        <tr>
+        <td>${element.nombre}</td>
+        <td>${element.fecha}</td>
+        <td>${element.estado}</td>
+        <td>${element.detalle}</td>
+      
+    </tr>
+    `
+    lista.push(tr)
+    });
+     
+    document.getElementById("tb1").innerHTML = lista.join('')
+}
+  
